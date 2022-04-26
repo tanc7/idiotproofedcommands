@@ -28,7 +28,16 @@ Google is dogass for finding good answers but if you failed a VM migration and y
 
 Where 102 was the VMID of the failed migration, and /dev/disk2 is the volume of your specific Proxmox cluster's node.
 
-**Migrate VM disk in Proxmox to another node in your Proxmox cluster using command line (as the GUI expects you to name all of your disks exactly the same)**
+**3. Migrate VM disk in Proxmox to another node in your Proxmox cluster using command line (as the GUI expects you to name all of your disks exactly the same)**
 
 Login to your original node and login as root. Then assuming you called your third node "vhost3", migrate your VM you want to move, and specify the --targetstorage argument and --with-local-disks argument
 `qm migrate 116 vhost3 --targetstorage disk3 --with-local-disks`
+
+**4. Mass rename files by its hash between one directory and another**
+
+```
+mkdir destinationfolder
+chmod +x renamefilebymd5sum.sh
+./renamefilebymd5sum.sh sourcefolder destinationfolder
+```
+```
