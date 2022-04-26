@@ -66,3 +66,16 @@ createSMBShare.bat
 recursivecopydirectoryOverSMB.bat
 useSMBShare.bat
 ```
+
+**8. Change your MAC address in Windows with a powershell script, courtesy of SANS**
+
+<a href="https://www.sans.org/blog/change-random-mac-address-in-windows-with-powershell-script/">SANS Institute Writeup</a>
+
+# Why did I make this repo?
+
+For the last half a decade, finding good documentation for complex, arcane commands on various search engines including Google, is straight up fucking garbo (even with a decent amount of Google Dorking). This was from hours of Googling and usage of DuckDuckGo before I found solutions to issues that many may never end up solving. I decided to make a repo of practical commands for unanswered questions.
+
+
+For example, the Ipv4 To Ipv4 PortProxy Command is useful for utilizing your Windows host as a attacking machine that redirects shells to your Kali Linux Virtual Machine, which is vital in not giving away your position in a penetration test.
+
+I will not put up commonly documented commands in this repo. Instead, I will focus on trying to solve vague problems, that not even pentester communities were able to publish (or disclose publicly if they knew about it).
