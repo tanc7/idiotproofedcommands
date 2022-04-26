@@ -20,3 +20,15 @@ In the rare event that you fear a hash collision and some jerk made a file with 
 for i in $(./findmatchingfilessha256.sh | awk '{print $2}');do echo 'removing' $i;rm -vf $i;echo finished;done
 ```
 
+**2. Force your Proxmox node to delete a failed disk copy by gunpoint**
+
+Google is dogass for finding good answers but if you failed a VM migration and you want to delete the disk that is wasting space and the GUI tells you the disk is "in use" (it's not, you don't even have a VMID conf file in /etc/pve/qemu-server for it)
+
+```lvremove /dev/disk2/vm-102-disk-0```
+
+Where 102 was the VMID of the failed migration, and /dev/disk2 is the volume of your specific Proxmox cluster's node.
+
+**Migrate VM disk in Proxmox to another node in your Proxmox cluster using command line (as the GUI expects you to name all of your disks exactly the same)**
+
+Login to your original node and login as root. Then assuming you called your third node "vhost3", migrate your VM you want to move, and specify the --targetstorage argument and --with-local-disks argument
+`qm migrate 116 vhost3 --targetstorage disk3 --with-local-disks`
