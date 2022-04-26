@@ -58,3 +58,11 @@ I also added a script to clean yourself up after your engagement is done
 Please edit it as it defaults to host listening port 3000 to port 22 of your WSL instance, which is actually a Hyper-V VM instance briefly spun up when you type "bash, ubuntu, or kali" on the command line if WSL is installed.
 
 `createARedirectProxyToSSHIntoAWSLVM.ps1`
+
+**7. Create SMB shares between two users on Windows machines and recursively copy a directory using xcopy**
+
+```
+createSMBShare.bat
+recursivecopydirectoryOverSMB.bat
+useSMBShare.bat
+```
