@@ -1,4 +1,4 @@
-# One of my crappier git repos
+# Idiot-Proofed Commands: One of my crappier git repos
 
 I don't expect a lot of recognition for this. For some scary reasn I have a feeling this repo will get insanely popular....
 
