@@ -40,7 +40,7 @@ mkdir destinationfolder
 chmod +x renamefilebymd5sum.sh
 ./renamefilebymd5sum.sh sourcefolder destinationfolder
 ```
-```
+
 **5. Creating a redirect proxy from a Windows 10 host to a attacking Kali Linux VM**
 
 I covered it in this article https://xringarchery.wordpress.com/2022/04/07/creating-a-redirect-proxy-on-windows-for-kali-linux-attacking-vms-vmware/
