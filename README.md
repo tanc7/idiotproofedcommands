@@ -41,3 +41,20 @@ chmod +x renamefilebymd5sum.sh
 ./renamefilebymd5sum.sh sourcefolder destinationfolder
 ```
 ```
+**5. Creating a redirect proxy from a Windows 10 host to a attacking Kali Linux VM**
+
+I covered it in this article https://xringarchery.wordpress.com/2022/04/07/creating-a-redirect-proxy-on-windows-for-kali-linux-attacking-vms-vmware/
+
+Essentially this allows you to do local LAN penetration tests by running the script (you will need to modify it to suit your VMWare Kali VM's NATed IP address
+
+`createRedirectProxyToKaliLinuxVM.bat`
+
+I also added a script to clean yourself up after your engagement is done
+
+`deleteRedirectProxyToKaliLinuxVM.bat`
+
+**6. Dynamically resolving your bash terminal session in WSL to its SSH listener**
+
+Please edit it as it defaults to host listening port 3000 to port 22 of your WSL instance, which is actually a Hyper-V VM instance briefly spun up when you type "bash, ubuntu, or kali" on the command line if WSL is installed.
+
+`createARedirectProxyToSSHIntoAWSLVM.ps1`
