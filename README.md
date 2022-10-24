@@ -2,6 +2,8 @@
 
 I don't expect a lot of recognition for this. For some scary reasn I have a feeling this repo will get insanely popular....
 
+These are commands I cooked up due to frustrations with finding documentation online for menial tasks, mostly for conveniently producing shellcode in my reverse shell, disassembling things, doing important maintenance work on my server clusters, organizing files, and winning CTFs
+
 # Description
 
 A list of arcane and idiot-proofed commands of convenience to do things such as...
