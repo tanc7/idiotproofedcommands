@@ -5,9 +5,9 @@ https://www.kali.org/blog/nuke-kali-linux-luks/
 
 Contrary to what the idiot shitposters on the internet speak of when it comes to "overwriting hard drives with zeroes or random data" to prevent recovery, that is a whole load of shit when it comes to FLASH memory.
 
-There are research papers on proper data destruction of SSDs and flash drives and NO cleaner has succeeded in producing irrecoverable SSD drives if your SSD is taken in for analysis for God knows what you do.
+There are research papers on proper data destruction of SSDs and flash drives and NO cleaner has succeeded in producing irrecoverable SSD drives if your SSD is taken in for analysis for God knows what you do. If you have found those research papers that I am referring to, the testing of "data destruction software" for SSDs, please put in a pull request. Because Google is the mouthpiece of the new Bigtech Nazi Party and I couldn't find the specific research papers dating back to 2010s-2013s
 
-The reason why is that SSD drives vary in methods of preserving it's integrity and operation. Usually, it tries to save itself from using up it's limited read/writes. So using dd if=/dev/urandom of=/dev/wholedisk will not work.
+The reason why is that SSD drives vary in methods of preserving it's integrity and operation. Usually, it tries to save itself from using up it's limited read/writes. So using dd if=/dev/urandom of=/dev/wholedisk will not work. Some asshole on the internet came up with the term "wear-leveling" to describe this. Probably because they wanted to keep their job instead of wasting air.
 
 Data on flash memory is negatively charged electrons stored on cells. What happens if you attempt to overwrite it with random data? You'll corrupt the data, but depending on what shit drive you bought, it may be just overwriting the same exact cluster of cells instead of the whole drive.
 
