@@ -1,7 +1,10 @@
 # Make a admin account with a really long password as Admin, and make new user accounts for old people that get tricked into being pwned all the time. As your admin user, run all of this.
 # Open a cmd.exe prompt, Windows + R then 'cmd.exe' in the bar, and Ctrl+Shift+Enter
-netsh advfirewall firewall add rule name="BlockHostile" dir=in action=block protocol=TCP localport=135,139,445,808,5040,7680,9001,139,49664-49669,50336,3389
+netsh advfirewall firewall add rule name="BlockHostile" dir=in action=block protocol=TCP localport=1-65535
+netsh advfirewall firewall add rule name="BlockHostile" dir=in action=block protocol=UDP localport=1-65535
+# Inbound contact through listener ports are NOT required. At least for TCP connections, since you can browse the web just fine if you open a ephemeral port while browsing idk... onlyfans?
 #CHECK netstat -ano | findstr /i LISTEN first!
+# For Microsuck, if the elderly installs new apps that require some sort of server or listening socket running, the rule will most likely be placed first, allowing that listening port to be used
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "RequirePlatformSecurityFeatures" /t REG_DWORD /d 1 /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "Locked" /t REG_DWORD /d 0 /f
