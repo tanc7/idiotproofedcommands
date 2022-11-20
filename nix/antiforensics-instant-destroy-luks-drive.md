@@ -42,4 +42,14 @@ You can delete your own LUKS key to prevent data recovery in seconds.
 
 Because NO key, not even the CORRECT key can decrypt it.
 
+# What if you forgot to set up LUKS?
 
+*Well then you're fucked*. No not really. But it's going to be a lot slower. But if it's a Linux host, you can either, set up LUKS encryption and follow the key deletion methods I mentioned above, or if it IS a ordinary spinning disk you can do this
+
+`for i in $(sudo fdisk -l | grep /dev/sd | grep Disk | cut -d \: -f1 | awk -F 'Disk ' '{print $2}');do nohup sudo dd if=/dev/urandom of=$i > nohup.out < /dev/null &;done`
+
+Note grepping for `/dev/sd`, for online VPSes it could be a /dev/vdX device, so change from `/dev/sd` to `/dev/vd`
+
+# If you are a bit late, you can try preinstalling your machines with shufflecake so you can give out the wrong password under coercion.
+
+shufflecake.net
